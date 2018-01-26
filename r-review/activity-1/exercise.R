@@ -1,17 +1,19 @@
 # Exercise-4
 
 # Set up: load `dplyr` and `ggplot2`
+install.pa
 library(dplyr)
 library(ggplot2)
 
 # Read, and then `source` the data-prep.R file. The `all.data` variable is now available
-
+source('./data-prep.R')
 
 # Create a column of percentage of registered voters who voted
 
 
 # Start by making a new `ggplot` with `all.data` as the data (no geometry yet)
 # What do you see?
+ggplot(data=all.data) + geom_point(mapping=aes(x=registered.voters, y=pct.voted, color=total.population))
 
 
 # Draw a scatter plot (with point geometry) with for the `all.data` set, 
